@@ -17,6 +17,7 @@ alias omzconf="nvim ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/src/config.z
 alias sysinfo="clear && neofetch"
 alias py="python3"
 alias zshrc="nvim ~/.zshrc"
+alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
 # changing `ls` colors (var setting)
 LS_COLORS="ow=01;36;40" && export LS_COLORS
