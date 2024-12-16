@@ -1,0 +1,29 @@
+dofile(vim.g.base46_cache .. "mason")
+
+return {
+  PATH = "skip",
+
+  ui = {
+    icons = {
+      package_pending = " ",
+      package_installed = " ",
+      package_uninstalled = " ",
+    },
+  },
+  
+  ensure_installed = {
+    "isort",
+    "black",
+    "mypy",
+    "ruff",
+    "pyright",
+    "prettier",
+    "prettierd",
+    "stylua",
+    "debugpy",
+    "vale",
+    "markdownlint",
+  },
+
+  max_concurrent_installers = 10,
+}

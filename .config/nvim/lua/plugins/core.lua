@@ -14,21 +14,9 @@ return {
 	{
 		"williamboman/mason.nvim",
 		cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate" },
-		opts = {
-			ensure_installed = {
-				"isort",
-				"black",
-				"mypy",
-				"ruff",
-				"pyright",
-				"prettier",
-				"prettierd",
-				"stylua",
-				"debugpy",
-				"markdownlint",
-				"vale",
-			},
-		},
+		opts = function() 
+			return require "configs.mason"
+		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
