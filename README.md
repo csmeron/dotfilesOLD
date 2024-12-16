@@ -15,5 +15,5 @@ Things like the NvChad/ui and base46 are entirely theirs, while I've replaced th
 Again, they're nothing special, hence the private repo, but I wanted to have everything in one place.
 
 ---
-## zshrc and starshop.toml
+## .zshrc and starship.toml
 Literally just my shell and propmt configs, nothing insane, nothing worth mention.
