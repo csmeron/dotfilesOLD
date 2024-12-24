@@ -110,3 +110,54 @@ You should now see the custom prompt, as well as have suggestions and syntax
 highlighting.
 
 To view contents of the configs, see the [.zshrc](/.zshrc) and the [Starship config](/.config/starship.toml)
+
+## Setting up Neovim
+
+_Just like with my .zshrc and starship.toml, I already have a neovim config_
+_created, we're just porting it over_
+
+Firstly, we need to install a handful of packages to ensure plugins work properly:
+
+```
+$ sudo apt install -y python3-venv
+
+$ sudo apt install -y unzip
+
+$ sudo apt install -y luarocks
+
+$ sudo apt install -y npm
+```
+
+Next, we need to actually install Neovim. This is a bit different than some
+distros, as we need Neovim 0.10 or higher, so we need to add the unstable ppa
+first, _then_ install.
+
+```
+$ sudo apt-add-repository ppa:neovim-ppa/unstable
+
+$ sudo apt install -y neovim
+```
+
+Now, before opening the app, copy the config file over:
+
+```
+$ cp -r ~/.dotfiles/.config/nvim ~/.config/
+```
+
+Now for the actual setup.
+
+When you initially run the `nvim` command, it'll pop up the Lazy menu, showing
+(hopefully) all of the necessary plugins being downloaded. After everything
+finishes, just `:q` out of nvim entirely, and re-enter it.
+
+At this point, you'll be on the main screen, and you can run:
+
+```
+:MasonInstallAll
+```
+
+And, assuming the packages from earlier installed properly, you should see all
+off the plugins installing. After this is done, you're good!
+
+**_Note:_** _The leader key is **Space**. You can pull up a cheatsheet for_
+\_keybinds with `<leader>ch`.
