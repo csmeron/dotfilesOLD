@@ -156,4 +156,4 @@ And, assuming the packages from earlier installed properly, you should see all
 off the plugins installing. After this is done, you're good!
 
 **_Note:_** _The leader key is **Space**. You can pull up a cheatsheet for_
-\_keybinds with `<leader>ch`.
+_keybinds with `<leader>ch`._
