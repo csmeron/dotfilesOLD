@@ -10,12 +10,66 @@ for, because Windows is ugly, disgusting, and abhorrent.
 
 This will cover how I set up things including but not limited to:
 
-- Setting up my [Neovim](https://github.com/neovim/neovim) config using my [dotfiles](/.config/nvim/),
-- Setting [ZSH](https://www.zsh.org) as default shell, possibly mentioning my preferred aliases
-- Implementing [Oh-My-ZSH](https://ohmyz.sh) for plugins like autocomplete and syntax highlighting,
+- Setting [ZSH](https://www.zsh.org) as default shell, possibly mentioning my
+  preferred aliases
+- Implementing [Oh-My-ZSH](https://ohmyz.sh) for plugins like autocomplete and
+  syntax highlighting,
 - Installing [Starship](https://starship.rs/) and applying my preferred [prompt](/.config/starship.toml),
+- Setting up my [Neovim](https://github.com/neovim/neovim) config using my [dotfiles](/.config/nvim/),
 - and maybe more!
 
-## Initial Information
+_As of writing this, I'm using WSL-2 running Ubuntu 22.04.5 LTS, so keep that
+in mind._
+_Obviously, make sure to run your equivalent of `sudo apt update` and `sudo apt upgrade`
+to ensure packages install properly._
 
-\_As of writing this, I'm using WSL-2 running
+## Initially
+
+Don't forget to clone the repo:
+
+```
+$
+```
+
+## Shell Configuration
+
+### Installing ZSH
+
+While I did for a while enjoy using Fish, I eventually moved back to zsh for
+comfort. This setup uses Oh-My-ZSH to add a small amount of plugins to improve
+functionality.
+
+First and foremost, you need to actually install ZSH and set it as your default
+shell:
+
+```
+# install zsh
+$ sudo apt install zsh
+
+# confirm install with `zsh --version`
+
+# set it to default shell:
+$ chsh -s $(which zsh)
+```
+
+After the install, you'll get a popup related to default config, choose `0`.
+
+After a refresh of your shell/opening a new instance of WSL, ZSH should work.
+
+### Setting up Oh-My-ZSH
+
+The initial install of Oh-My-ZSH is super simple; all you need to do is run a
+single command:
+
+```
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+After doing this, you should see the OMZ splash screen, and a more appealing
+prompt.
+
+**_Note:_** \_It's at this point that I personally go and set up [Starship](https://starship.rs)
+with my preferred prompt, as I just like doing so before the OMZ plugins. If
+you wish to do so, [This link](#starship-prompt-setup) takes you to that section of the guide.
+
+## Starship Prompt Setup
