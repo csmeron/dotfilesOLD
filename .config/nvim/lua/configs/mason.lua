@@ -23,6 +23,7 @@ return {
 		"debugpy",
 		"vale",
 		"marksman",
+		"lua-language-server",
 	},
 
 	max_concurrent_installers = 10,

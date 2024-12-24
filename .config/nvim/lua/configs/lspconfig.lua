@@ -22,6 +22,7 @@ end
 
 local on_attach = config.on_attach
 local capabilities = config.capabilities
+
 lspconfig.pyright.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
@@ -32,4 +33,10 @@ lspconfig.marksman.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 	filestypes = { "markdown" },
+})
+
+lspconfig.lua_ls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filetypes = { "lua" },
 })
