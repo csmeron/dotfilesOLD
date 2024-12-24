@@ -75,10 +75,6 @@ $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/t
 After doing this, you should see the OMZ splash screen, and a more appealing
 prompt.
 
-**_Note:_** \_It's at this point that I personally go and set up [Starship](https://starship.rs)
-with my preferred prompt, as I just like doing so before the OMZ plugins. If
-you wish to do so, [This link](#starship-prompt-setup) takes you to that section of the guide.
-
 #### Installing plugins
 
 Some of the plugins used in my OMZ config require installation beforehand.
