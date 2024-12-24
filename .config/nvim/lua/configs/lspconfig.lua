@@ -28,3 +28,8 @@ lspconfig.pyright.setup({
 	filetypes = { "python" },
 })
 
+lspconfig.marksman.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filestypes = { "markdown" },
+})
