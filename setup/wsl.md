@@ -6,8 +6,6 @@ This file is the "guide" for how I set up my WSL environment. I mostly use my
 WSL env for programming/development as well as things I'd prefer to use Linux
 for, because Windows is ugly, disgusting, and abhorrent.
 
----
-
 This will cover how I set up things including but not limited to:
 
 - Setting [ZSH](https://www.zsh.org) as default shell, possibly mentioning my
@@ -24,6 +22,8 @@ in mind._
 _Obviously, make sure to run your equivalent of `sudo apt update` and `sudo apt upgrade`
 to ensure packages install properly._
 
+---
+
 ## Initially
 
 Don't forget to clone the repo:
@@ -37,6 +37,8 @@ $ git clone https://github.com/csmeron/dotfiles.git ~/.dotfiles
 ```
 
 This is the file that will contain all the configs to port over.
+
+---
 
 ## Shell Configuration
 
