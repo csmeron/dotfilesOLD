@@ -16,6 +16,7 @@ This will cover how I set up things including but not limited to:
   syntax highlighting,
 - Installing [Starship](https://starship.rs/) and applying my preferred [prompt](/.config/starship.toml),
 - Setting up my [Neovim](https://github.com/neovim/neovim) config using my [dotfiles](/.config/nvim/),
+- Connecting the github repo to properly sync changes.
 - and maybe more!
 
 _As of writing this, I'm using WSL-2 running Ubuntu 22.04.5 LTS, so keep that
@@ -28,8 +29,14 @@ to ensure packages install properly._
 Don't forget to clone the repo:
 
 ```
-$
+# For me (SSH)
+$ git clone git@github.com:csmeron/dotfiles.git ~/.dotfiles
+
+# For others (HTTPs)
+$ git clone https://github.com/csmeron/dotfiles.git ~/.dotfiles
 ```
+
+This is the file that will contain all the configs to port over.
 
 ## Shell Configuration
 
@@ -72,4 +79,34 @@ prompt.
 with my preferred prompt, as I just like doing so before the OMZ plugins. If
 you wish to do so, [This link](#starship-prompt-setup) takes you to that section of the guide.
 
-## Starship Prompt Setup
+#### Installing plugins
+
+Some of the plugins used in my OMZ config require installation beforehand.
+Before copying the rc, run the following commands:
+
+```
+$ sudo apt install -y zsh-syntax-highlighting
+
+$ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+$ curl -sS https//starship.rs/install.sh | sh
+```
+
+Now, before we copy the .zshrc, you should copy the Starship config, as the
+commands above installed Starship, and the zshrc sources it:
+
+```
+$ cp ~/.dotfiles/.config/starship.toml ~/.config/
+```
+
+Now copy the .zshrc to your home directory (using the appropriate dotfile path)
+and source it to apply.
+
+```
+$ cp ~/.dotfiles/.zshrc ~/ && source ~/.zshrc
+```
+
+You should now see the custom prompt, as well as have suggestions and syntax
+highlighting.
+
+To view contents of the configs, see the [.zshrc](/.zshrc) and the [Starship config](/.config/starship.toml)
