@@ -38,8 +38,6 @@ $ git clone https://github.com/csmeron/dotfiles.git ~/.dotfiles
 
 This is the file that will contain all the configs to port over.
 
----
-
 ## Shell Configuration
 
 ### Installing ZSH
